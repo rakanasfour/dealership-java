@@ -13,6 +13,7 @@ public class Car {
 	private int id;
 	@Column(name="type")
 	private Type type;
+	
 	@Column(name="brand")
 	private String brand;
 	@Column(name="model")

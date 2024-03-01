@@ -3,7 +3,7 @@ RUN mkdir -p /app/source
 COPY . /app/source
 WORKDIR /app/source
 RUN ./mvnw clean package
-
+#second stage
 FROM openjdk:17-jdk-alpine
 WORKDIR /app
 COPY --from=builder /app/source/target/*.jar /app/app.jar

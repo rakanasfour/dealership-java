@@ -20,15 +20,19 @@ import com.dealership.service.DealerService;
 @RequestMapping("/api")
 public class DealerController {
 	
+	//www.abood.com/api/ford
+	
 	@Autowired
 	private DealerService service;
 	
 	
+	
 	@GetMapping("/getAllCars")
-	public List<Car> getAllCars(){
+		public List<Car> getAllCars(){
 		return service.getAllCars();
 		
 	}
+
 
 
 	@GetMapping("{brand}")

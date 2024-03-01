@@ -18,14 +18,16 @@ public class DealerService {
 	public List<Car> getAllCars(){
 		
 		return repo.findAll();
+		
 	}
 	
 	
 	public List<Car> getCar(String  brand) {
-		
+			
 		return repo.findByBrand(brand);
 		
 	}
+	
 	
 	public String addCar(Car car) {
 		repo.save(car);
